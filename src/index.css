@@ -1,3 +1,39 @@
-.app {
-  
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;500;600;700&display=swap');
+
+
+/* base styles */
+*{
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
 }
+/* navbar */
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1 {
+  color: #2080df;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #2080df
+}
+/* content */
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+/* book previews */
