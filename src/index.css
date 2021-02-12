@@ -6,6 +6,7 @@
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   color: #333;
+  /* box-sizing: border-box; */
 }
 /* navbar */
 .navbar {
@@ -30,10 +31,80 @@
 .navbar a:hover {
   color: #2080df
 }
-/* content */
+/* app content */
 .content {
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
 }
-/* book previews */
+/* BookList */
+.book-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+}
+.book-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+.book-preview h2{
+  font-size: 20px;
+  color: #2080df;
+  margin-bottom: 8px;
+}
+.book-preview a{
+  text-decoration: none;
+}
+
+/* book details page */
+.book-details h2 {
+  font-size: 20px;
+  color: #2080df;
+  margin-bottom: 10px;
+}
+.book-details div {
+  margin: 20px 0;
+}
+.book-details button {
+  background: #2080df;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* add new book form */
+.add-book {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.add-book label {
+  text-align: left;
+  display: block;
+}
+.add-book h2 {
+  font-size: 20px;
+  color: #2080df;
+  margin-bottom: 30px;
+}
+.add-book input, .add-book textarea, .add-book select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.add-book button {
+  background: #2080df;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+
+
