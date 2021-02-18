@@ -1,10 +1,6 @@
 {
   "books": [
     {
-      "id": 0,
-      "author": "select"
-    },
-    {
       "id": 1,
       "isbn": "9781593275846",
       "title": "Eloquent JavaScript, Second Edition",
@@ -99,6 +95,24 @@
       "pages": 538,
       "description": "Design and build Web APIs for a broad range of clients—including browsers and mobile devices—that can adapt to change over time. This practical, hands-on guide takes you through the theory and tools you need to build evolvable HTTP services with Microsoft’s ASP.NET Web API framework. In the process, you’ll learn how design and implement a real-world Web API.",
       "website": "http://chimera.labs.oreilly.com/books/1234000001708/index.html"
+    },
+    {
+      "title": "bla bla",
+      "author": "sad",
+      "description": "asdf",
+      "id": 9
+    },
+    {
+      "title": "what about now",
+      "author": "af",
+      "description": "afs",
+      "id": 10
+    },
+    {
+      "title": "virker det nu",
+      "author": "adf",
+      "description": "asdf",
+      "id": 11
     }
   ]
 }

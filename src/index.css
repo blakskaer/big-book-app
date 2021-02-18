@@ -57,6 +57,9 @@
 }
 
 /* book details page */
+.book-details {
+  padding: 10px 16px;
+}
 .book-details h2 {
   font-size: 20px;
   color: #2080df;
@@ -70,6 +73,7 @@
   color: #fff;
   border: 0;
   padding: 8px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
@@ -88,8 +92,9 @@
   color: #2080df;
   margin-bottom: 30px;
 }
-.add-book input, .add-book textarea, .add-book select {
+.add-book input, .add-book textarea {
   width: 100%;
+  font-size: 14px;
   padding: 6px 10px;
   margin: 10px 0;
   border: 1px solid #ddd;
@@ -102,6 +107,28 @@
   border: 0;
   padding: 8px;
   border-radius: 8px;
+  cursor: pointer;
+}
+.auto-complete {
+  width: 100%;
+  font-size: 14px;
+}
+/* only activated when there are suggestions to be shown - see AutoComple component's className */
+.auto-complete-on {
+  border: 1px solid #b3d6ff;
+  border-top: 0;
+  margin: -10px auto 10px;
+}
+.auto-complete ul {
+  list-style-type: none;
+  padding: 0;
+}
+.auto-complete li {
+  padding: 6px 10px;
+  display: block;
+}
+.auto-complete li:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
   cursor: pointer;
 }
 

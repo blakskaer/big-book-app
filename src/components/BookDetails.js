@@ -1,10 +1,18 @@
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 
 const BookDetails = () => {
   const { id } = useParams();
-  console.log('iiiiddd', id, typeof(id))
   const { data: book, error, isPending } = useFetch('http://localhost:8000/books/' + id);
+  const history = useHistory();
+
+  const handleDelete = () => {
+    fetch('http://localhost:8000/books/' + id, {
+      method: 'DELETE'
+    }).then(() => {
+      history.push('/');
+    })
+  }
 
   return (
     <div className="book-details">
@@ -15,7 +23,7 @@ const BookDetails = () => {
           <h2>{ book.title }</h2>
           <p>by { book.author }</p>
           <div>{ book.description }</div>
-          <button>delete</button>
+          <button onClick={handleDelete}>delete</button>
         </article>
       ) }
     </div>
