@@ -4,6 +4,11 @@ import { useHistory } from 'react-router-dom';
 import useFetch from "../hooks/useFetch";
 import AutoComplete from "./AutoComplete";
 
+// helperfunction that makes first  letter of input start uppercase
+const inputToUpper = (input) => input.split(' ').map(word => {
+    return word[0].toUpperCase() + word.slice(1);
+  }).join(' ');
+
 const AddBook = () => {
   const { data: books } = useFetch('http://localhost:8000/books');
 
@@ -13,7 +18,7 @@ const AddBook = () => {
   const [suggestions, setSuggestions] = useState([]);
   const [isPending, setIsPending] = useState(false);
   const history = useHistory();
-
+  
   // event handlers
   const handleAuthorInput = (e) => {
     const value = e.target.value;
@@ -28,22 +33,17 @@ const AddBook = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    // create the book object that should be added to the database
-    const book = { title, author, description }
+    const titleUpper = inputToUpper(title);
+    const authorUpper = inputToUpper(author);
 
-    setIsPending(true);
-
-    // send new book to json server via post request
     fetch('http://localhost:8000/books', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(book)
+      body: JSON.stringify({title: titleUpper, author: authorUpper, description })
     }).then(() => {
       console.log('new book added');
-      setIsPending(false);
-      // redirect back to home page
-      history.push('/');
-    })
+      history.push('/')
+    });
   };
 
   return (

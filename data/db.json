@@ -97,22 +97,10 @@
       "website": "http://chimera.labs.oreilly.com/books/1234000001708/index.html"
     },
     {
-      "title": "bla bla",
-      "author": "sad",
-      "description": "asdf",
+      "title": "En God Bog",
+      "author": "Eliott Birgerman",
+      "description": "skal;dfk",
       "id": 9
-    },
-    {
-      "title": "what about now",
-      "author": "af",
-      "description": "afs",
-      "id": 10
-    },
-    {
-      "title": "virker det nu",
-      "author": "adf",
-      "description": "asdf",
-      "id": 11
     }
   ]
 }
