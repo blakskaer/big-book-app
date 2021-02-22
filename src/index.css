@@ -55,6 +55,20 @@
 .book-preview a{
   text-decoration: none;
 }
+/* global search bar in BookList */
+.search-field {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.search-field input {
+  margin-left: auto;
+  font-size: 12px;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
 
 /* book details page */
 .book-details {

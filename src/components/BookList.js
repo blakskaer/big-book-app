@@ -19,12 +19,14 @@ const BookList = ({ books }) => {
 
   return (
     <div className="book-list">
-      <input
-      type="text"
-      placeholder="Search"
-      value={searchTerm}
-      onChange={handleSearch}
-      />
+      <div className="search-field">
+        <input
+        type="text"
+        placeholder="Search"
+        value={searchTerm}
+        onChange={handleSearch}
+        />
+      </div>
       {matches.map(book => (
           <div className="book-preview" key={book.id}>
             <Link to={`/books/${book.id}`}>
